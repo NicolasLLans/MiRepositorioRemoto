@@ -1,0 +1,43 @@
+{
+	"name":"Nicolás Lanselota",
+	"backImagen": "",
+	"image": "../../../assets/foto-perfil.png",
+	"position": "Developer Full Stack Jr.",
+	"ubication": "Buenos Aires (Argentina) ",
+	"contact": "informacion de contacto. ",
+	"about": "Emprendedor y programador freelance.",
+    "experiencia":{
+        "img": "",
+        "title":"FAUNA Cosmética Natural",
+        "descripcion":"2020 - Actualidad Buenos Aires, Argentina"
+    },
+    "educacion":{
+        "id1":{
+            "img":"",
+            "title":"Universidad de Buenos Aires",
+            "descripción":"2012 - 2016 Diseño Gráfico"
+        },
+        "id2":{
+            "img":"",
+            "title":"Argentina Programa",
+            "descripción":"2021 Octubre-Mayo Developer full Stack"
+        }
+    },
+    "skills":{
+        "id1":{
+            "title":"Resolución de Problemas"
+        },
+        "id2":{
+            "title":"Diseño de Sistema"
+        }
+    },
+    "Proyectos":{
+        "id1":{
+            "title":"FAUNA Cosmética Natural",
+            "descripción":"Desarrollo de presencia online con ecommerce, blog y landing page. Vinculada con pasarela de pago Mercado Pago. Encargado del mantenimiento y de diseño web"
+        }
+    }
+    
+
+	
+}
