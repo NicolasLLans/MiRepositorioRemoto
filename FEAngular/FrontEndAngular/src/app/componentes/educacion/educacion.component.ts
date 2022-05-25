@@ -42,13 +42,14 @@ export class EducacionComponent implements OnInit {
         button.setAttribute('data-target','#addEducacionModal');
       }else if(mode==='delete'){
         this.deleteEducacion=educacion;
-        button.setAttribute('data-target','#deleteEducacionModal')
+        button.setAttribute('data-target','#deleteEducacionModal');
       }else if(mode==='edit'){
         this.editarEducacion=educacion;
-        button.setAttribute('data-target','#editEducacionModal')
+        button.setAttribute('data-target','#editEducacionModal');
       }
       container?.appendChild(button); 
       button.click();
+      console.log("llama a la funcion");
     }
 
     public onAddEducacion(addForm: NgForm):void{
