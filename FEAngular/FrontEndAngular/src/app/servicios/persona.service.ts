@@ -16,4 +16,10 @@ export class PersonaService {
   public verPersona():Observable<Persona[]>{
     return this.http.get<Persona[]>(`${this.apiServerUrl}/ver/personas`);
   }
+  public actualizar(persona: Persona):Observable<Persona>{
+    return this.http.put<Persona>(`${this.apiServerUrl}/persona/actualizar`,persona);
+  }
+  public deletePersona(id: number):Observable<void>{
+    return this.http.delete<void>(`${this.apiServerUrl}/delete/${id}`);
+  }
 }

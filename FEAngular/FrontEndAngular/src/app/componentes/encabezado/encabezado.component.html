@@ -2,8 +2,12 @@
 <section class="card  m-3 p-2" *ngFor="let Persona of personas">
     <img src="../../../assets/banner.png" alt="Programación Full Stack">
     <div>
-        <img src="../../../assets/foto-perfil.png" id="FotoDePerfil" class="col-auto img-responsive p-2 rounded-circle"  alt="Nicolás Lanselota">
-        <a href=""><img src="../../../assets/bxs-edit-alt.svg" class="" alt=""></a>
+        <img [src]="Persona.fotoPerfil" id="FotoDePerfil" class="col-auto img-responsive p-2 rounded-circle"  alt="Nicolás Lanselota">
+        <button type="button"
+        class="btn"
+        (click)="editarTexto()">
+            <a><img src="../../../assets/bxs-edit-alt.svg" class="" alt=""></a>
+        </button>
     </div>
     
     <H1 class="card-title m-2 mt-0">{{Persona.nombre}} {{Persona.apellido}}</H1>
@@ -15,5 +19,21 @@
         <button type="button" class="btn btn-secondary btn-sm m-1">Añadir sección</button>
         <button type="button" class="btn btn-secondary btn-sm m-1">Más</button>
     </div>
+
+    <!-- modal de edicion-->
+    <div *ngIf="formVisibility">
+            <form (ngSubmit)="onSubmit(Persona)">
+                    <input type="text" 
+                    [(ngModel)]="Persona.fotoPerfil"
+                    name="imagen"
+                    placeholder="Editar nombre"
+                    class="form-control">
+                    <button type="submit" class="btn">
+                        Guardar cambios
+                    </button>
+            </form>                  
+    </div>
+    
 </section>
+
 
