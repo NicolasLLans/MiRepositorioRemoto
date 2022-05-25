@@ -9,6 +9,19 @@
             <a><img src="../../../assets/bxs-edit-alt.svg" class="" alt=""></a>
         </button>
     </div>
+    <!-- modal de edicion-->
+    <div *ngIf="formVisibility">
+        <form (ngSubmit)="onSubmit(Persona)">
+                <input type="text" 
+                [(ngModel)]="Persona.fotoPerfil"
+                name="imagen"
+                placeholder="URL de la imagen"
+                class="form-control">
+                <button type="submit" class="btn m-1 btn-primary">
+                    Guardar cambios
+                </button>
+        </form>                  
+    </div>
     
     <H1 class="card-title m-2 mt-0">{{Persona.nombre}} {{Persona.apellido}}</H1>
     <H5 class="m-2 mt-0">{{Persona.titulo}}</H5>
@@ -20,19 +33,7 @@
         <button type="button" class="btn btn-secondary btn-sm m-1">Más</button>
     </div>
 
-    <!-- modal de edicion-->
-    <div *ngIf="formVisibility">
-            <form (ngSubmit)="onSubmit(Persona)">
-                    <input type="text" 
-                    [(ngModel)]="Persona.fotoPerfil"
-                    name="imagen"
-                    placeholder="Editar nombre"
-                    class="form-control">
-                    <button type="submit" class="btn">
-                        Guardar cambios
-                    </button>
-            </form>                  
-    </div>
+    
     
 </section>
 

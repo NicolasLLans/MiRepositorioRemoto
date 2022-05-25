@@ -1,20 +1,34 @@
 <!--Experiencia -->
-<section class="card m-3 p-2" *ngFor="let Experiencia of experiencias">
+<section class="card m-3 p-2">
     <div class="row">
         <H2 class="col m-2">Experiencia</H2>
-        <a href="" class="col-1 m-2"><img src="../../../assets/bx-add-to-queue.svg" alt=""></a>
+        <button type="button" class="btn  col-1 m-3" (click)="onOpenModal('add')">
+            <a class="nav-link">
+                <img src="../../../assets/bx-add-to-queue.svg" alt="agregar"><span class="sr-only"></span>
+            </a>
+        </button>
     </div>
-    <div class="row">
-        <img src="../../../assets/logo-de-fauna.svg" class="col-2 m-2" alt="Fauna cosmetica natural">
-    <div class="col ">
-        <h2>{{Experiencia.tituloExp}}</h2>
-        <p>{{Experiencia.fechaExp}} - {{Experiencia.descExp}}</p>
+    <div class="container-fluid" id="main-container">
+        <ul class="row" *ngFor="let Experiencia of experiencias">
+            <li class="list-group-item">
+                <div class="row">
+                    <img src="../../../assets/logo-de-fauna.svg" class="col-2 img-responsive m-2" alt="Fauna cosmetica natural">
+                <div class="col-7 text-center">
+                    <h2>{{Experiencia.tituloExp}}</h2>
+                    <p>{{Experiencia.fechaExp}} - {{Experiencia.descExp}}</p>
+                </div>
+                <!--botones de edición-->
+                   <div class="col-1">
+                      <a type="button" 
+                      class="btn  
+                      col m-3" ><img src="../../../assets/bxs-edit-alt.svg" alt="editar"></a>
+                      <a type="button" 
+                      class="btn  col m-3"><img src="../../../assets/bx-x.svg" alt="x"></a>
+                   </div>
+                </div>
+            </li>
+        </ul>
     </div>
-    <!--botones de edición-->
-       <div class="col-1 m-2">
-          <a href=""><img src="../../../assets/bxs-edit-alt.svg" alt=""></a>
-          <a href=""><img src="../../../assets/bx-x.svg" alt=""></a>
-       </div>
-    </div>
+    
   </section>
 

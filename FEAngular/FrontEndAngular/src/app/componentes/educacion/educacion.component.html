@@ -1,6 +1,6 @@
 <!--Educación -->
 <section class="card m-3 p-2">
-    <div class="row edu main-container">
+    <div class="row ">
         <H2 class="col m-2">Educación</H2>
         <button type="button" class="btn  col-1 m-3" (click)="onOpenModal('add')">
             <a class="nav-link">
@@ -8,12 +8,12 @@
             </a>
         </button>
     </div>
-    <div class="" id="main-container">
+    <div class="container-fluid" id="main-container">
         <ul class="row"  *ngFor="let Educacion of educaciones">
             <li class="list-group-item">
                 <div class="row">
-                    <img [src]="Educacion.imgEdu" class="col-2 img-responsive m-3" alt="Universidad de Buenos Aires">
-                    <div class="col-7">
+                    <img [src]="Educacion.imgEdu" class="col-2  img-responsive m-2" alt="Universidad de Buenos Aires">
+                    <div class="col-7 text-center">
                         <H2>{{Educacion.tituloEdu}}</H2>
                         <p>{{Educacion.fechaEdu}} {{Educacion.descEdu}}</p>
                     </div>
