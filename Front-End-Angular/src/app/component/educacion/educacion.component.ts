@@ -1,5 +1,7 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { Educacion } from 'src/app/Models/educacion';
+import { EducacionService } from 'src/app/servicios/educacion.service';
 
 @Component({
   selector: 'app-educacion',
@@ -7,14 +9,24 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  miPorfolio:any;
-  constructor(private datosPorfolio:PorfolioService) { }
+  
+
+  constructor(private educacionService:EducacionService) { }
+
+  public educaciones:Educacion[]=[];
 
   ngOnInit(): void {
-    this.datosPorfolio.obetenerDatos().subscribe(data =>{
-      console.log(data);
-      this.miPorfolio=data;
-    });  
+    this.getEducaciones();
+  }
+  public getEducaciones():void{
+    this.educacionService.getEducacion().subscribe({
+      next:(Response:Educacion[]) =>{
+      this.educaciones=Response;
+      },
+      error:(error:HttpErrorResponse)=>{
+        alert(error.message)
+      }
+    });
   }
 
 }

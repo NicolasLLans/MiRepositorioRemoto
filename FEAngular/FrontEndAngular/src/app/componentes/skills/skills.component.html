@@ -1,0 +1,24 @@
+<!--hard skill & soft Skills -->
+<section class="card m-3 p-2">
+    <div class="row">
+        <H2 class="col m-2">Hard skills & soft skills</H2>
+        <a href="" class="col-1 m-2"><img src="../../../assets/bx-add-to-queue.svg" alt=""></a>
+    </div>
+    <ul *ngFor="let Skills of skills">
+        <li class="list-group-item">
+            <h3 class="m-2">{{Skills.nombreSkill}}</h3>
+    <div class="row">
+        <div class="col m-2">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+        </div>
+        <!--botones de edición-->
+        <div class="col-1 m-1">
+            <a href=""><img src="../../../assets/bxs-edit-alt.svg" alt=""></a>
+            <a href=""><img src="../../../assets/bx-x.svg" alt=""></a>
+        </div>
+    </div>
+        </li>
+    </ul>
+  </section>

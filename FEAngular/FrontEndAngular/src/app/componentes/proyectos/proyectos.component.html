@@ -1,0 +1,21 @@
+<!--Proyectos -->
+<section class="card m-3 p-2">
+    <div class="row">
+         <H2 class="col m-2">Proyectos</H2>
+         <a href="" class="col-1 m-2"><img src="../../../assets/bx-add-to-queue.svg" alt=""></a>
+    </div>
+    <ul *ngFor="let Proyectos of proyectos">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col m-2">
+                    <H3><a href="https://faunacosmeticanatural.com/">{{Proyectos.nombre}}</a></H3>
+                    <p>{{Proyectos.descripcion}}</p>            
+                </div>
+                <div class="col-1 m-2">
+                    <a href=""><img src="../../../assets/bxs-edit-alt.svg" alt=""></a>
+                    <a href=""><img src="../../../assets/bx-x.svg" alt=""></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+   </section>

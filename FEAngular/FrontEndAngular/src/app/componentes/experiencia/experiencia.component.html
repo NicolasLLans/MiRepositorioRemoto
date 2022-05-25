@@ -1,0 +1,20 @@
+<!--Experiencia -->
+<section class="card m-3 p-2" *ngFor="let Experiencia of experiencias">
+    <div class="row">
+        <H2 class="col m-2">Experiencia</H2>
+        <a href="" class="col-1 m-2"><img src="../../../assets/bx-add-to-queue.svg" alt=""></a>
+    </div>
+    <div class="row">
+        <img src="../../../assets/logo-de-fauna.svg" class="col-2 m-2" alt="Fauna cosmetica natural">
+    <div class="col ">
+        <h2>{{Experiencia.tituloExp}}</h2>
+        <p>{{Experiencia.fechaExp}} - {{Experiencia.descExp}}</p>
+    </div>
+    <!--botones de edición-->
+       <div class="col-1 m-2">
+          <a href=""><img src="../../../assets/bxs-edit-alt.svg" alt=""></a>
+          <a href=""><img src="../../../assets/bx-x.svg" alt=""></a>
+       </div>
+    </div>
+  </section>
+

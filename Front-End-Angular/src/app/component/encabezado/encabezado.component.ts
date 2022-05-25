@@ -13,7 +13,7 @@ export class EncabezadoComponent implements OnInit {
   ngOnInit(): void {
     this.datosPorfolio.obetenerDatos().subscribe(data =>{
       console.log(data);
-      this.miPorfolio=data;
+      this.miPorfolio=data[0];
     });
   }
 

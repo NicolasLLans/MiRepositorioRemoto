@@ -1,5 +1,5 @@
 <!--Educación -->
-<section class="card m-3 p-2">
+<section class="card m-3 p-2" *ngFor="let Educacion of educaciones">
     <div class="row">
         <H2 class="col m-2">Educación</H2>
         <a href="" class="col-1 m-2"><img src="../../../assets/bx-add-to-queue.svg" alt=""></a>
@@ -7,8 +7,8 @@
     <div class="row p-2">
         <img src="../../../assets/Logo-de-uba.png" class="col-2 img-responsive m-3" alt="Universidad de Buenos Aires">
         <div class="col">
-            <H2>Universidad de Buenos Aires</H2>
-            <p>2012 - 2016 Diseño Gráfico</p>
+            <H2>{{Educacion.tituloEdu}}</H2>
+            <p>{{Educacion.fechaEdu}} {{Educacion.descEdu}}</p>
         </div>
         <!--botones de edición-->
         <div class="col-1 m-2">
@@ -19,7 +19,7 @@
     <div class="row p-2">
         <img src="../../../assets/AP-gris.svg" class="col-3 img-responsive" alt="Argentina programa">
         <div class="col m-2">
-            <H2>{{miPorfolio.educacion.id2.title}}</H2>
+            <H2>titulo 2</H2>
             <p>2021 Octubre-Mayo Developer Full Stack</p>
         </div>
         <!--botones de edición-->
