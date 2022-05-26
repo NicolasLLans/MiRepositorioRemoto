@@ -31,7 +31,7 @@ export class ExperienciaComponent implements OnInit {
     });
   }
 
-  public onOpenModal(mode:String, experiencias?: Experiencia):void{
+  public onOpenModal(mode:String, experiencia?: Experiencia):void{
     const container=document.getElementById('main-container');
     const button=document.createElement('button');
     button.style.display='none';
@@ -39,10 +39,10 @@ export class ExperienciaComponent implements OnInit {
     if(mode==='add'){
       button.setAttribute('data-target','#addExperienciaModal');
     }else if(mode==='delete'){
-      this.deleteExperiencia=experiencias;
+      this.deleteExperiencia=experiencia;
       button.setAttribute('data-target','#deleteExperienciaModal');
     }else if(mode==='edit'){
-      this.editarExperiencia=experiencias;
+      this.editarExperiencia=experiencia;
       button.setAttribute('data-target','#editExperienciaModal');
     }
     container?.appendChild(button); 
