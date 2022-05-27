@@ -8,21 +8,20 @@
             </a>
          </button>
     </div>
-    <div class="container-fluid" id="main-container">
-        <ul *ngFor="let Proyectos of proyectos">
+    <div  id="main-container">
+        <ul class="container-fluid" *ngFor="let Proyectos of proyectos">
             <li class="list-group-item">
                 <div class="row">
-                    <div class="col-8 m-2">
+                    <div class="col-9 m-2">
                         <H3><a [href]="Proyectos.link" >{{Proyectos.nombre}}</a></H3>
                         <p>{{Proyectos.descripcion}}</p>            
                     </div>
-                    <div class="col-1 m-3">
+                    <div class="col-1">
                         <a  type="button" 
-                        class="btn  
-                        col m-3" 
+                        class="btn" 
                         (click)="onOpenModal('edit',Proyectos)"><img src="../../../assets/bxs-edit-alt.svg" alt=""></a>
                         <a type="button" 
-                        class="btn  col m-3" 
+                        class="btn" 
                         (click)="onOpenModal ('delete',Proyectos)"><img src="../../../assets/bx-x.svg" alt=""></a>
                     </div>
                 </div> 

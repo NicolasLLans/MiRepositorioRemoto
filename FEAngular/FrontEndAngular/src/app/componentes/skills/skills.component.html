@@ -1,27 +1,28 @@
 <!--hard skill & soft Skills -->
 <section class="card m-3 p-2">
     <div class="row">
-        <H2 class="col m-2">Hard skills & soft skills</H2>
-        <button (click)="onOpenModal('add')" class="btn col-1 m-3">
+        <div class="row m-1">
+            <H2 class="col">Hard skills & soft skills</H2>
+            <button (click)="onOpenModal('add')" class="btn col-1 m-2">
             <a class="nav-link"><img src="../../../assets/bx-add-to-queue.svg" alt=""></a>
         </button>
+        </div>
     </div>
-    <div class="container-fluid" id="main-container">
-        <ul *ngFor="let Skills of skills">
+    <div  id="main-container">
+        <ul class="container-fluid" *ngFor="let Skills of skills">
             <li class="list-group-item">
                 <h3 class="m-2">{{Skills.nombreSkill}}</h3>
                 <div class="row">
-                    <div class="col-8 m-2">
+                    <div class="col-9 m-2">
                         <div class="progress">
                             <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
                                 style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <!--botones de edición-->
-                    <div class="col-1 m-1">
-                        <a type="button" class="btn  
-                col m-3" (click)="onOpenModal('edit',Skills)"><img src="../../../assets/bxs-edit-alt.svg" alt=""></a>
-                        <a type="button" class="btn  col m-3" (click)="onOpenModal('delete',Skills)"><img
+                    <div class="col-1">
+                        <a type="button" class="btn" (click)="onOpenModal('edit',Skills)"><img src="../../../assets/bxs-edit-alt.svg" alt=""></a>
+                        <a type="button" class="btn" (click)="onOpenModal('delete',Skills)"><img
                                 src="../../../assets/bx-x.svg" alt=""></a>
                     </div>
                 </div>

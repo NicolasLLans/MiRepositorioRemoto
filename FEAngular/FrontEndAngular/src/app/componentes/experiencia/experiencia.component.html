@@ -8,11 +8,11 @@
             </a>
         </button>
     </div>
-    <div class="container-fluid" id="main-container">
-        <ul class="row" *ngFor="let Experiencia of experiencias">
+    <div id="main-container">
+        <ul class="container-fluid"  *ngFor="let Experiencia of experiencias">
             <li class="list-group-item">
                 <div class="row">
-                    <img [src]="Experiencia.imgExp" class="col-2 img-responsive m-2" alt="Fauna cosmetica natural">
+                    <img [src]="Experiencia.imgExp" class="col-3 img-responsive" alt="Fauna cosmetica natural">
                 <div class="col-7 text-center">
                     <h2>{{Experiencia.tituloExp}}</h2>
                     <p>{{Experiencia.fechaExp}} - {{Experiencia.descExp}}</p>
@@ -20,15 +20,14 @@
                 <!--botones de edición-->
                    <div class="col-1">
                       <a type="button" 
-                        class="btn  
-                        col m-3"
+                        class="btn"
                         (click)="onOpenModal('edit',Experiencia)"
                         >
                             <img src="../../../assets/bxs-edit-alt.svg" alt="editar">
                         </a>
                         <a type="button" 
                             (click)="onOpenModal('delete', Experiencia)"
-                            class="btn  col m-3">
+                            class="btn">
                             <img src="../../../assets/bx-x.svg" alt="x">
                         </a>
                    </div>
